@@ -1,0 +1,20 @@
+{
+  "name": "l5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create:test": "NODE_ENV=test npx sequelize-cli db:create",
+    "pretest": "NODE_ENV=test npx sequelize-cli db:drop && NODE_ENV=test npx sequelize-cli db:create",
+    "test": "NODE_ENV=test jest --detectOpenHandles",
+    "prepare": "husky install"
+  },
+  "author": "Karthik",
+  "license": "ISC",
+  "devDependencies": {
+    "sequelize-cli": "^6.5.2"
+  },
+  "dependencies": {
+    "minimist": "^1.2.7"
+  }
+}
